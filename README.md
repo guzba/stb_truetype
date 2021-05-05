@@ -1,6 +1,6 @@
 # stb_truetype
 
-`nimble install stbtruetype`
+`nimble install stb_truetype`
 
 This repo provides Nim bindings to the stb_truetype font rasterizer.
 
