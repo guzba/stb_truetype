@@ -2531,6 +2531,7 @@ static stbtt_int32  stbtt__GetGlyphGPOSInfoAdvance(const stbtt_fontinfo *info, i
 
                     switch (posFormat) {
                         case 1: {
+                            printf("stbtt posFormat 1\n");
                             stbtt_int32 l, r, m;
                             int straw, needle;
                             stbtt_uint16 valueFormat1 = ttUSHORT(table + 4);
@@ -2574,6 +2575,7 @@ static stbtt_int32  stbtt__GetGlyphGPOSInfoAdvance(const stbtt_fontinfo *info, i
                         } break;
 
                         case 2: {
+                            printf("stbtt posFormat 2\n");
                             stbtt_uint16 valueFormat1 = ttUSHORT(table + 4);
                             stbtt_uint16 valueFormat2 = ttUSHORT(table + 6);
 
@@ -2597,6 +2599,7 @@ static stbtt_int32  stbtt__GetGlyphGPOSInfoAdvance(const stbtt_fontinfo *info, i
                                 stbtt_uint8 *class1Records = table + 16;
                                 stbtt_uint8 *class2Records = class1Records + 2 * (glyph1class * class2Count);
                                 stbtt_int16 xAdvance = ttSHORT(class2Records + 2 * glyph2class);
+                                printf("stbtt classes: %d %d adv: %d\n", glyph1class, glyph2class, xAdvance);
                                 return xAdvance;
                             }
                         } break;
