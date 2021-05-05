@@ -2,7 +2,7 @@
 
 `nimble install stb_truetype`
 
-This repo provides bindings to the stb_truetype font rasterizer.
+This repo provides Nim bindings to the stb_truetype font rasterizer.
 
 ## Status
 
