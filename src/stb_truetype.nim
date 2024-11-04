@@ -43,7 +43,7 @@ proc stbtt_FindGlyphIndex(
 ): cint {.importc: "stbtt_FindGlyphIndex", stbcall.}
 
 proc findGlyphIndex*(fontInfo: FontInfo, rune: Rune): uint16 =
-  result = stbtt_FindGlyphIndex(fontInfo, rune.cint).uint16
+  stbtt_FindGlyphIndex(fontInfo, rune.cint).uint16
 
 proc stbtt_GetFontVMetrics(
   fontInfo: FontInfo,
